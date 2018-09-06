@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var x= prompt("请输入底数X：");//底数
+			var y= prompt("请输入指数Y：");//指数
+			var z=1;
+			if(y<=0)
+			{
+				y=y*-1;
+				for(var i=1;i<=y;i++)
+				{
+					z*=x;
+				}
+				z=1/z;
+			}
+			for(var i=1;i<=y;i++)
+			{
+				z*=x;
+			}
+			document.writeln("x的y次方是"+z)
+		</script>
+		
+		
+	</head>
+	<body></body>
+	
+	
+</html>
+//考虑各种情况，实现x的y次方
