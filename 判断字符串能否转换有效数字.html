@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var text = prompt("enter your content:");
+			var isOk = true;
+			var m = 0;
+			var n = 0;
+			
+			for(var i=1;i<=text.length;i++)
+			
+			{
+				var value= text.charCodeAt(i);
+				if(value>0 && value<45||value>57||value==47)
+				 {
+					 document.write("false!");
+					 isOk = false;
+					 break;
+				 }
+				 if (value==45) m++;
+				 if (value==46) n++;
+			}
+			
+			if(isOk)
+			{
+				if(m>1)
+				{document.write("false!");}
+				
+				else if(n>1)
+				{document.write("false!");}
+				
+				else if(m==1 && text.charCodeAt(0)!==45)
+				{document.write("false!");}
+				
+				else if(n==1 && text.charCodeAt(text.length-1)==46)
+				{document.write("false!");}
+				
+				else{
+					document.write("有效");
+				}
+			}
+
+		</script>
+		
+		
+	</head>
+	<body></body>
+	
+	
+</html>
+
+//字符串判断是否可以被转换为一个有效数字
