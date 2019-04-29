@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+        <script type="text/javascript">
+        
+        
+        for( var i=1; i<=100; i++)
+        {   
+
+            var b = true;
+            if(i!=1)
+            {
+
+              for( var j=2; j<i; j++)
+             {
+              if(i%j==0)
+              {
+                b=false;
+                break;
+                
+              }
+            
+             }
+            }
+            if(b)
+            {
+               document.write(i+" ");
+            }
+
+        }
+
+		</script>
+		
+		
+	</head>
+	<body></body>
+	
+	
+</html>
+<!-- 质数表的质数又称素数。指整数在一个大于1的自然数中,除了1和此整数自身外,没法被其他自然数整除的数。 -->

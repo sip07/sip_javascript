@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+                var users = new Array("aaa","bbb","ccc","ddd");
+                var pass = new Array("1111","2222","3333","4444");
+
+                var  m = true;
+                var  n = false;
+                var x = 1 ;
+                var y = 1 ;
+
+
+
+            for(var r=1;r<=3;r++)
+            {    
+                var username = prompt("username:");//获取用户名
+                for(var i=0;i<=users.length;i++)
+                {
+                
+                    if( username == users[i])//如果用户名符合
+                    {  
+                         m = true;//标记量为真
+
+                        var password = prompt("password:");//获取密码                        
+
+                        for(var j=0;j<=pass.length;j++)//遍历数组对照密码
+                        {
+
+                            
+                            if(password==pass[j])//如果密码匹配
+                            {
+                                n = true;//标记量为真
+                                window.alert("login succuess!");//输出成功
+                                break;//中止循环
+                            }
+                            else if(j == pass.length)//如果密码遍历后不匹配
+                            {
+                                x++;//计数器增1
+                                window.alert("password wrong!");
+
+                                if( x > 3 )//如果用户名错误超过3次
+                                {
+                                  window.alert("login not allowed");
+                                  m = false;
+                                //   break;
+                                }
+                               
+
+
+                            }
+
+                            
+                        }
+                            
+                    }
+                    else  if( i == users.length)//如果用户名不匹配
+                    {
+                        y++;
+                       //如果已遍历数组，则输出用户名错误
+                        window.alert("username not found!");
+
+                       
+                        if( y > 3 )//如果用户名错误超过3次
+                        {
+                            window.alert("login not allowed");
+                            m = false;
+                            break;//跳出输入循环
+                        }
+
+                    }
+
+                }
+            
+
+            } 
+            window.alert("login failed!");
+
+		</script>
+		
+		
+	</head>
+	<body></body>
+	
+	
+</html>
